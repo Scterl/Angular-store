@@ -1,8 +1,11 @@
 <div class="row">
   <div class="col-md-5">
-    <app-commodity-list></app-commodity-list>
+    <app-commodity-list (commodityWasSelected)="selectedCommodity = $event" ></app-commodity-list>
   </div>
   <div class="col-md-7">
-    <app-commodity-detail></app-commodity-detail>
+    <app-commodity-detail *ngIf="selectedCommodity;else infoText" [commodity]="selectedCommodity"></app-commodity-detail>
+    <ng-template #infoText>
+      <p>请选择你的商品</p>
+    </ng-template>
   </div>
 </div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Commodity} from "../commodity.model";
 
 @Component({
   selector: 'app-commodity-detail',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./commodity-detail.component.css']
 })
 export class CommodityDetailComponent {
-
+  @Input() commodity: Commodity;
 }

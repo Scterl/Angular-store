@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Commodity} from "./commodity.model";
 
 @Component({
   selector: 'app-commodities',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./commodities.component.css']
 })
 export class CommoditiesComponent {
-
+  selectedCommodity: Commodity;
 }
