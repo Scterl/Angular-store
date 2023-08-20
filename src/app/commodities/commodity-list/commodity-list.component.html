@@ -6,6 +6,10 @@
 <hr>
 <div class="row">
   <div class="col-xs-12">
+<!--    [commodity]="commodityEL"：通过属性绑定，将当前循环迭代的 commodityEL 对象传递给子组件。-->
+<!--    这是一个事件绑定，它监听子组件的 commoditySelected 事件。-->
+<!--    当子组件触发 commoditySelected 事件时，将调用父组件中的 onRecipeSelected 方法，-->
+<!--    并将当前循环迭代的 commodityEL 对象作为参数传递给它-->
     <app-commodity-item
       *ngFor="let commodityEL of commodities"
       [commodity]="commodityEL"

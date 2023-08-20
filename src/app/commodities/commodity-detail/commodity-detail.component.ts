@@ -7,5 +7,6 @@ import {Commodity} from "../commodity.model";
   styleUrls: ['./commodity-detail.component.css']
 })
 export class CommodityDetailComponent {
+  // 这是一个输入属性装饰器，用于接收来自父组件的商品对象（类型为 Commodity）
   @Input() commodity: Commodity;
 }

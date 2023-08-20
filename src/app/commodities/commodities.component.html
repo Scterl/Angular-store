@@ -1,5 +1,7 @@
 <div class="row">
   <div class="col-md-5">
+<!--    selectedCommodity = $event：这表示将事件传递的数据（$event）-->
+<!--    赋值给父组件的 selectedCommodity 变量。在这里，$event 是子组件触发的事件所携带的数据。-->
     <app-commodity-list (commodityWasSelected)="selectedCommodity = $event" ></app-commodity-list>
   </div>
   <div class="col-md-7">
@@ -9,3 +11,7 @@
     </ng-template>
   </div>
 </div>
+
+综合起来，当在子组件中触发 commodityWasSelected 事件时，父组件会通过事件绑定监听这个事件，
+并将事件携带的数据（在这种情况下，可能是选定的商品对象）
+赋值给父组件的 selectedCommodity 变量。这使得父组件可以在用户选择商品时跟踪选定的商品对象

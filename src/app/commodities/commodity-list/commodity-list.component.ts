@@ -7,6 +7,8 @@ import {Commodity} from "../commodity.model";
   styleUrls: ['./commodity-list.component.css']
 })
 export class CommodityListComponent implements OnInit{
+  // 这是在子组件中声明的一个输出属性，用于在子组件中触发 commodityWasSelected 事件，
+  // 并将选定的商品对象（类型为 Commodity）传递给父组件
   @Output() commodityWasSelected = new EventEmitter<Commodity>();
 
   commodities: Commodity[] = [
@@ -22,6 +24,8 @@ export class CommodityListComponent implements OnInit{
 
   }
 
+  // 这是子组件中的一个方法，它接收一个 commodity 参数，即用户选择的商品对象。
+  // 当调用这个方法时，它会通过 commodityWasSelected 事件发射器触发 commodityWasSelected 事件，并传递选定的商品对象。
   onRecipeSelected(commodity: Commodity){
     this.commodityWasSelected.emit(commodity);
   }
